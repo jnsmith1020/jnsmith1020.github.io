@@ -55,6 +55,26 @@
   --primary: var(--cadet-blue);
   --info: var(--san-marino);
   --success: var(--aqua-forest);
-	--warning: var(--fire-bush);
-	--danger: var(--pomegranate);
+  --warning: var(--fire-bush);
+  --danger: var(--pomegranate);
+}
+
+/* TODO: Move styles not related to colors to their own file. */
+
+h1, h2, h3,
+h4, h5, h6 {
+  color: var(--main);
+  font-family: sans-serif;
+}
+
+p {
+  color: var(--main);
+}
+
+a {
+  color: var(--dark);
+}
+
+li {
+  list-style-stype: none;
 }
