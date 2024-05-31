@@ -1,0 +1,4 @@
+# Custom headers for Netlify
+# See https://docs.netlify.com/routing/headers/
+/*
+  X-Content-Type-Options: nosniff
