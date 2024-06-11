@@ -1,0 +1,11 @@
+.icon-list {
+    display: grid;
+    padding: 0;
+    gap: 8px;
+}
+
+.icon-list__item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}

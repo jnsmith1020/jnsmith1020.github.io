@@ -1,0 +1,11 @@
+#skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    align-content: stretch;
+}
+
+.skills-card::part(base) {
+    color: #333;
+    height: 100%;
+}

@@ -1,0 +1,20 @@
+.timeline__item {
+    position: relative;
+    padding-bottom: var(--sl-spacing-2x-large);
+    padding-left: var(--sl-spacing-medium);
+}
+
+.timeline__item::before {
+    content: "";
+    background-color: var(--sl-color-emerald-700);
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    left: -15px;
+    z-index: -1;
+}
+
+.timeline__date {
+    font-size: var(--sl-font-size-small);
+    margin-bottom: var(--sl-spacing-medium);
+}
