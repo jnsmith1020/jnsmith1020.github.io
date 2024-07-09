@@ -5,7 +5,18 @@
     align-content: stretch;
 }
 
+.skills-card h3 {
+    margin: 0;
+}
+
+.skills-card::part(header) {
+    background: hsla(0, 0%, 0%, 0.25);
+    border: none;
+}
+
 .skills-card::part(base) {
-    color: #333;
+    background: hsla(0, 0%, 0%, 0.2);
+    border: none;
     height: 100%;
+    box-shadow: var(--jns-shadow);
 }

@@ -2,6 +2,7 @@
     display: grid;
     padding: 0;
     gap: var(--sl-spacing-x-small);
+    margin-top: 0;
 }
 
 .icon-list__item {

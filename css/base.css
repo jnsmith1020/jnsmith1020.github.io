@@ -1,9 +1,12 @@
 :root {
+    --jns-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.3);
     font-family: var(--sl-font-serif);
 }
 
 body {
-    margin: var(--sl-spacing-medium);
+    padding: var(--sl-spacing-medium);
+    margin: 0 auto;
+    max-width: 80ch;
 }
 
 h1, h2, h3, h4, h5, h6 {
