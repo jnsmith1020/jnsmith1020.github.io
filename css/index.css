@@ -1,7 +1,7 @@
 #skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
+    gap: var(--sl-spacing-medium);
     align-content: stretch;
 }
 

@@ -1,4 +1,5 @@
 :root {
   color: #f2f2f2;
   background-color: var(--sl-color-emerald-800);
+  background: linear-gradient(90deg, var(--sl-color-emerald-800) 0%, var(--sl-color-emerald-700) 60%, var(--sl-color-emerald-600) 100%);
 }
