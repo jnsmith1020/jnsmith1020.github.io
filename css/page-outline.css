@@ -1,0 +1,14 @@
+.page-outline__heading {
+    font-size: var(--sl-font-size-medium);
+}
+
+.page-outline__list {
+    list-style-type: none;
+    border-left: 1px solid var(--sl-color-emerald-700);
+    border-radius: var(--sl-border-radius-small);
+    padding-left: var(--sl-spacing-small);
+}
+
+.page-outline__list-item {
+    margin-bottom: var(--sl-spacing-x-small);
+}

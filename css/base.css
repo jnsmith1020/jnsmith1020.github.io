@@ -1,9 +1,12 @@
 :root {
     --jns-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.3);
+    --jns-color-transparent-black-light: hsla(0, 0%, 0%, 0.2);
+    --jns-color-transparent-black-dark: hsla(0, 0%, 0%, 0.25);
     font-family: var(--sl-font-serif);
 }
 
 body {
+    position: relative;
     padding: var(--sl-spacing-medium);
     margin: 0 auto;
     max-width: 80ch;
@@ -14,6 +17,24 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 1px 1px hsla(0, 0%, 0%, 0.5);
 }
 
+a {
+    text-decoration: none;
+    color: var(--sl-color-yellow-200);
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-position: from-font;
+    text-underline-offset: var(--sl-spacing-3x-small);
+}
+
 :not(:defined) {
     visibility: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
 }

@@ -28,10 +28,15 @@
     <!-- End Shoelace -->
     <link rel="stylesheet" href="./css/base.css"/>
     <link rel="stylesheet" href="./css/colors.css"/>
+    <link rel="stylesheet" href="./css/buttons.css"/>
+    <link rel="stylesheet" href="./css/sidebar.css"/>
+    <link rel="stylesheet" href="./css/page-outline.css"/>
     <link rel="stylesheet" href="./css/index.css"/>
     <link rel="stylesheet" href="./css/icon-list.css"/>
     <link rel="stylesheet" href="./css/timeline.css"/>
-    <script async src="./js/index.js"></script>
+    <script async src="./js/sidebar.js"></script>
+    <script async src="./js/page-outline.js"></script>
+    <script async src="./js/time-elapsed.js"></script>
   </head>
 
   <body>
@@ -39,170 +44,196 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N34DDTQN"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <section>
+    <header></header>
+    <main>
       <h1>About Me</h1>
-      <p>
-        I am a creative and reliable full-stack website developer with over 
-        <span class="js-time-since" data-start="2018-10" data-format="y" hidden></span> 
-        experience developing end-to-end systems. I'm an advocate for an accessible 
-        and user-friendly web. I'm passionate about finding solutions to problems that 
-        make everyday challenges easier and more efficient for everyone.
-      </p>
-    </section>
-    <section>
-      <h2>Skills</h2>
+      <h2 class="page-outline__heading">On this page</h2>
+      <nav class="js-page-outline">
+        <ol class="page-outline__list">
+          <li class="page-outline__list-item js-page-outline__list-item">
+            <a class="page-outline__link" href="#introduction">Introduction</a>
+          </li>
+          <li class="page-outline__list-item js-page-outline__list-item">
+            <a class="page-outline__link" href="#skills">Skills</a>
+          </li>
+          <li class="page-outline__list-item js-page-outline__list-item">
+            <a class="page-outline__link" href="#career">Career</a>
+          </li>
+          <li class="page-outline__list-item js-page-outline__list-item">
+            <a class="page-outline__link" href="#work-history">Work History</a>
+          </li>
+          <li class="page-outline__list-item js-page-outline__list-item">
+            <a class="page-outline__link" href="#education">Education</a>
+          </li>
+        </ol>
+        <button class="button--plain-text js-page-outline__toggle">Show more</button>
+      </nav>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          I am a creative and reliable full-stack website developer with over 
+          <span class="js-time-since" data-start="2018-10" data-format="y" hidden></span> 
+          experience developing end-to-end systems. I'm an advocate for an accessible 
+          and user-friendly web. I'm passionate about finding solutions to problems that 
+          make everyday challenges easier and more efficient for everyone.
+        </p>
+      </section>
       <section id="skills">
-        <sl-card class="skills-card">
-          <div slot="header">
-            <h3>Languages</h3>
-          </div>
-          <ul class="icon-list">
-            <li class="icon-list__item">
-              <sl-icon name="filetype-css"></sl-icon>
-              <div>CSS</div>
+        <h2>Skills</h2>
+        <section class="skills-card__container">
+          <sl-card class="skills-card">
+            <div slot="header">
+              <h3>Languages</h3>
+            </div>
+            <ul class="icon-list">
+              <li class="icon-list__item">
+                <sl-icon name="filetype-css"></sl-icon>
+                <div>CSS</div>
+              </li>
+              <li class="icon-list__item">
+                <sl-icon name="filetype-html"></sl-icon>
+                <div>HTML</div>
+              </li>
+              <li class="icon-list__item">
+                <sl-icon name="filetype-js"></sl-icon>
+                <div>JavaScript</div>
+              </li>
+              <li class="icon-list__item">
+                <sl-icon name="filetype-sql"></sl-icon>
+                <div>MySQL</div>
+              </li>
+              <li class="icon-list__item">
+                <sl-icon name="filetype-php"></sl-icon>
+                <div>PHP</div>
+              </li>
+              <li class="icon-list__item">
+                <sl-icon name="filetype-py"></sl-icon>
+                <div>Python</div>
+              </li>
+            </ul>
+          </sl-card>
+          <sl-card class="skills-card">
+            <div slot="header">
+              <h3>Frameworks</h3>
+            </div>
+            <ul class="icon-list">
+              <li class="icon-list__item">
+                <sl-icon name="gear"></sl-icon>
+                <div>Django/Wagtail</div>
+              </li>
+              <li class="icon-list__item">
+                <sl-icon name="gear"></sl-icon>
+                <div>Symfony/Drupal</div>
+              </li>
+            </ul>
+          </sl-card>
+        </section>
+      </section>
+      <section id="career">
+        <h2>Career</h2>
+        <section id="work-history">
+          <h3>Work History</h3>
+          <ul class="timeline">
+            <li class="timeline__item">
+              <div class="">Nov 2021 to Present</div>
+              <div class="timeline__date js-time-since" data-start="2021-11" hidden></div>
+              <div class="timeline__title">Senior Web Developer</div>
+              <div class="timeline__subtitle">Visions Federal Credit Union</div>
+              <ul>
+                <li>
+                  Influenced changes to the department's individual evaluation process to 
+                  clearly define expectations and challenge employees to strive for 
+                  excellence.
+                </li>
+                <li>
+                  Developed a Kanban style task board to increase visibility of 
+                  in-progress work and reduced the need for status update meetings with 
+                  project stakeholders.
+                </li>
+                <li>
+                  Mentored web developers and assisted onboarding of senior web developers.
+                </li>
+              </ul>
             </li>
-            <li class="icon-list__item">
-              <sl-icon name="filetype-html"></sl-icon>
-              <div>HTML</div>
+            <li class="timeline__item">
+              <div class="">Oct 2018 to Nov 2021</div>
+              <div class="timeline__date js-time-since" data-start="2018-10" data-end="2021-11" hidden></div>
+              <div class="timeline__title">Web Developer</div>
+              <div class="timeline__subtitle">Visions Federal Credit Union</div>
+              <ul>
+                <li>
+                  Increased employee engagement by modernizing and simplifying the user 
+                  experience for multiple internal systems.
+                </li>
+                <li>
+                  Major contributor to migration of the intranet platform to empower users 
+                  to manage content and free developer resources.
+                </li>
+                <li>
+                  Redesigned robust eligibility tool into an easy-to-use multi-step form.
+                </li>
+                <li>
+                  Enhanced vendor driven application with a custom-built interface.
+                </li>
+                <li>
+                  Proposed and integrated development tooling for more effective design 
+                  prototyping, error tracking, and code base integrity.
+                </li>
+              </ul>
             </li>
-            <li class="icon-list__item">
-              <sl-icon name="filetype-js"></sl-icon>
-              <div>JavaScript</div>
-            </li>
-            <li class="icon-list__item">
-              <sl-icon name="filetype-sql"></sl-icon>
-              <div>MySQL</div>
-            </li>
-            <li class="icon-list__item">
-              <sl-icon name="filetype-php"></sl-icon>
-              <div>PHP</div>
-            </li>
-            <li class="icon-list__item">
-              <sl-icon name="filetype-py"></sl-icon>
-              <div>Python</div>
+            <li class="timeline__item">
+              <div class="">Sep 2017 to Oct 2018</div>
+              <div class="timeline__date js-time-since" data-start="2017-09" data-end="2018-10" hidden></div>
+              <div class="timeline__title">Software Engineer</div>
+              <div class="timeline__subtitle">Baltimore County</div>
+              <ul>
+                <li>
+                  Lead initiative to redesign UI for a complex Single Page Application web 
+                  site.
+                </li>
+                <li>
+                  Reduced the code base and increased maintainability of legacy JavaScript, 
+                  HTML and CSS by utilizing design patterns, such as Revealing Module 
+                  Design pattern.
+                </li>
+              </ul>
+            <li class="timeline__item">
+              <div class="">May 2016 to Sep 2017</div>
+              <div class="timeline__date js-time-since" data-start="2016-05" data-end="2017-09" hidden></div>
+              <div class="timeline__title">Network Operations Center Tier 1 Support</div>
+              <div class="timeline__subtitle">Baltimore County</div>
+              <ul>
+                <li>
+                  Wrote PHP web application which consolidated data from different systems 
+                  that provided a centralized location for important updates, helpful 
+                  resources, and ticket formatting in a dashboard-like interface. This 
+                  interface increased first-call resolution and reduced the number of 
+                  miss-assigned tickets.
+                </li>
+              </ul>
             </li>
           </ul>
-        </sl-card>
-        <sl-card class="skills-card">
-          <div slot="header">
-            <h3>Frameworks</h3>
-          </div>
-          <ul class="icon-list">
-            <li class="icon-list__item">
-              <sl-icon name="gear"></sl-icon>
-              <div>Django/Wagtail</div>
+        </section>
+        <section id="education">
+          <h3>Education</h3>
+          <ul class="timeline">
+            <li class="timeline__item">
+              <div>2013 to 2015</div>
+              <div class="timeline__date js-time-since" data-start="2013-01" data-end="2015-01" hidden></div>
+              <div class="timeline__title">B.S. Computer Science</div>
+              <div class="timeline__subtitle">East Stroudsburg University of Pennsylvania</div>
+              <ul><li>Core credits completed.</li></ul>
             </li>
-            <li class="icon-list__item">
-              <sl-icon name="gear"></sl-icon>
-              <div>Symfony/Drupal</div>
+            <li class="timeline__item">
+              <div>2010 to 2013</div>
+              <div class="timeline__date js-time-since" data-start="2010-01" data-end="2013-01" hidden></div>
+              <div class="timeline__title">A.S. Computer Science</div>
+              <div class="timeline__subtitle">Northampton Community College</div>
             </li>
           </ul>
-        </sl-card>
+        </section>
       </section>
-    </section>
-    <section>
-      <h2>Career</h2>
-      <section>
-        <h3>Work History</h3>
-        <ul class="timeline">
-          <li class="timeline__item">
-            <div class="">Nov 2021 to Present</div>
-            <div class="timeline__date js-time-since" data-start="2021-11" hidden></div>
-            <div class="timeline__title">Senior Web Developer</div>
-            <div class="timeline__subtitle">Visions Federal Credit Union</div>
-            <ul>
-              <li>
-                Influenced changes to the department's individual evaluation process to 
-                clearly define expectations and challenge employees to strive for 
-                excellence.
-              </li>
-              <li>
-                Developed a Kanban style task board to increase visibility of 
-                in-progress work and reduced the need for status update meetings with 
-                project stakeholders.
-              </li>
-              <li>
-                Mentored web developers and assisted onboarding of senior web developers.
-              </li>
-            </ul>
-          </li>
-          <li class="timeline__item">
-            <div class="">Oct 2018 to Nov 2021</div>
-            <div class="timeline__date js-time-since" data-start="2018-10" data-end="2021-11" hidden></div>
-            <div class="timeline__title">Web Developer</div>
-            <div class="timeline__subtitle">Visions Federal Credit Union</div>
-            <ul>
-              <li>
-                Increased employee engagement by modernizing and simplifying the user 
-                experience for multiple internal systems.
-              </li>
-              <li>
-                Major contributor to migration of the intranet platform to empower users 
-                to manage content and free developer resources.
-              </li>
-              <li>
-                Redesigned robust eligibility tool into an easy-to-use multi-step form.
-              </li>
-              <li>
-                Enhanced vendor driven application with a custom-built interface.
-              </li>
-              <li>
-                Proposed and integrated development tooling for more effective design 
-                prototyping, error tracking, and code base integrity.
-              </li>
-            </ul>
-          </li>
-          <li class="timeline__item">
-            <div class="">Sep 2017 to Oct 2018</div>
-            <div class="timeline__date js-time-since" data-start="2017-09" data-end="2018-10" hidden></div>
-            <div class="timeline__title">Software Engineer</div>
-            <div class="timeline__subtitle">Baltimore County</div>
-            <ul>
-              <li>
-                Lead initiative to redesign UI for a complex Single Page Application web 
-                site.
-              </li>
-              <li>
-                Reduced the code base and increased maintainability of legacy JavaScript, 
-                HTML and CSS by utilizing design patterns, such as Revealing Module 
-                Design pattern.
-              </li>
-            </ul>
-          <li class="timeline__item">
-            <div class="">May 2016 to Sep 2017</div>
-            <div class="timeline__date js-time-since" data-start="2016-05" data-end="2017-09" hidden></div>
-            <div class="timeline__title">Network Operations Center Tier 1 Support</div>
-            <div class="timeline__subtitle">Baltimore County</div>
-            <ul>
-              <li>
-                Wrote PHP web application which consolidated data from different systems 
-                that provided a centralized location for important updates, helpful 
-                resources, and ticket formatting in a dashboard-like interface. This 
-                interface increased first-call resolution and reduced the number of 
-                miss-assigned tickets.
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Education</h3>
-        <ul class="timeline">
-          <li class="timeline__item">
-            <div>2013 to 2015</div>
-            <div class="timeline__date js-time-since" data-start="2013-01" data-end="2015-01" hidden></div>
-            <div class="timeline__title">B.S. Computer Science</div>
-            <div class="timeline__subtitle">East Stroudsburg University of Pennsylvania</div>
-            <ul><li>Core credits completed.</li></ul>
-          </li>
-          <li class="timeline__item">
-            <div>2010 to 2013</div>
-            <div class="timeline__date js-time-since" data-start="2010-01" data-end="2013-01" hidden></div>
-            <div class="timeline__title">A.S. Computer Science</div>
-            <div class="timeline__subtitle">Northampton Community College</div>
-          </li>
-        </ul>
-      </section>
-    </section>
+    </main>
+    <footer></footer>
   </body>
 </html>

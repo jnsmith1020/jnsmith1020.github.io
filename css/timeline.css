@@ -6,8 +6,8 @@
     position: relative;
     margin-bottom: var(--sl-spacing-medium);
     margin-left: var(--sl-spacing-medium);
-    background: hsla(0, 0%, 0%, 0.2);
-    border-radius: 4px;
+    background: var(--jns-color-transparent-black-light);
+    border-radius: var(--sl-border-radius-small);
     padding: var(--sl-spacing-medium);
     box-shadow: var(--jns-shadow);
 }

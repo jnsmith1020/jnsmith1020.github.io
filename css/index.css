@@ -1,4 +1,4 @@
-#skills {
+.skills-card__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--sl-spacing-medium);
@@ -10,12 +10,12 @@
 }
 
 .skills-card::part(header) {
-    background: hsla(0, 0%, 0%, 0.25);
+    background: var(--jns-color-transparent-black-dark);
     border: none;
 }
 
 .skills-card::part(base) {
-    background: hsla(0, 0%, 0%, 0.2);
+    background: var(--jns-color-transparent-black-light);
     border: none;
     height: 100%;
     box-shadow: var(--jns-shadow);

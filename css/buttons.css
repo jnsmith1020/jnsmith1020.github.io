@@ -1,0 +1,12 @@
+button {
+    cursor: pointer;
+}
+
+.button--plain-text {
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+}
