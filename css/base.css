@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 1px 1px hsla(0, 0%, 0%, 0.5);
 }
 
+.subtitle {
+    display: block;
+    font-size: 0.7em;
+}
+
 a {
     text-decoration: none;
     color: var(--sl-color-yellow-200);

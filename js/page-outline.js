@@ -1,4 +1,4 @@
-class PageOutline {
+export default class PageOutline {
     isExpanded = false
 
     constructor(element) {
@@ -45,11 +45,3 @@ class PageOutline {
         this.isExpanded ? this.hide() : this.show()
     }
 }
-
-document.addEventListener("DOMContentLoaded", (event) => {
-    const elements = document.querySelectorAll(".js-page-outline")
-
-    elements.forEach((element) => {
-        const outline = new PageOutline(element)
-    })
-})

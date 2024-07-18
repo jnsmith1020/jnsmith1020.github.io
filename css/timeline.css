@@ -29,7 +29,6 @@ ul li.timeline__item:last-of-type::before {
 
 .timeline__date {
     font-size: var(--sl-font-size-small);
-    margin-bottom: var(--sl-spacing-medium);
 }
 
 .timeline__title {
