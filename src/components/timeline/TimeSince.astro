@@ -1,0 +1,22 @@
+---
+import { calculateTimeElapsed, utcToEst } from "../../scripts/time.js"
+
+const { startDate, endDate } = Astro.props
+const now = new Date(Date.now())
+const start = startDate ? new Date(Date.parse(startDate)) : now
+const end = endDate ? new Date(Date.parse(endDate)) : now
+const timeElapsed = calculateTimeElapsed(
+    utcToEst(start),
+    utcToEst(end)
+)
+---
+{ 
+    timeElapsed && (
+        <div
+            class="timeline__date js-timeline__date"
+            data-start={startDate}
+            data-end={endDate}>
+            {timeElapsed}
+        </div>
+    )
+}

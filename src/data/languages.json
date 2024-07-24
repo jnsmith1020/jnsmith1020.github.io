@@ -1,0 +1,26 @@
+[
+    {
+        "text": "CSS",
+        "icon": "filetype-css"
+    },
+    {
+        "text": "HTML",
+        "icon": "filetype-html"
+    },
+    {
+        "text": "JavaScript",
+        "icon": "filetype-js"
+    },
+    {
+        "text": "MySQL",
+        "icon": "filetype-sql"
+    },
+    {
+        "text": "PHP",
+        "icon": "filetype-php"
+    },
+    {
+        "text": "Python",
+        "icon": "filetype-py"
+    }
+]

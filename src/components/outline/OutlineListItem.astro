@@ -1,0 +1,7 @@
+---
+const { text, id } = Astro.props
+const href = `#${id}`
+---
+<li class="page-outline__list-item">
+    <a class="page-outline__link" href={href}>{text}</a>
+</li>

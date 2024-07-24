@@ -1,0 +1,17 @@
+---
+interface OutlineListItem {
+    text: string;
+    id: string;
+}
+
+import OutlineListItem from "./OutlineListItem.astro"
+
+const { items } = Astro.props
+---
+<nav class="page-outline">
+    <ol class="page-outline__list">
+        {
+            items.map((item: OutlineListItem) => <OutlineListItem text={item.text} id={item.id} />)
+        }
+    </ol>
+</nav>

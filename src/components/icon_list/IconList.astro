@@ -1,0 +1,15 @@
+---
+import ListItem from "./ListItem.astro"
+
+interface IconListItem {
+    text: string;
+    icon: string;
+}
+
+const { items } = Astro.props
+---
+<ul class="icon-list">
+    {
+        items.map((item: IconListItem) => <ListItem text={item.text} icon={item.icon} />)
+    }
+</ul>

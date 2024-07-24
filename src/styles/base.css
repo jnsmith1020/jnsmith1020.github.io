@@ -17,6 +17,20 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 1px 1px hsla(0, 0%, 0%, 0.5);
 }
 
+details {
+    background: var(--jns-color-transparent-black-light);
+    border: none;
+    border-radius: var(--sl-border-radius-small);
+    height: 100%;
+    box-shadow: var(--jns-shadow);
+    padding: var(--sl-spacing-small);
+
+}
+
+details > summary {
+    cursor: pointer;
+}
+
 .subtitle {
     display: block;
     font-size: 0.7em;
@@ -32,9 +46,13 @@ a:hover {
     text-underline-position: from-font;
     text-underline-offset: var(--sl-spacing-3x-small);
 }
+sl-card:not(:defined) {
+    opacity: 0;
+}
 
-:not(:defined) {
-    visibility: hidden;
+sl-card:defined {
+    opacity: 1;
+    transition: var(--sl-transition-slow);
 }
 
 .sr-only {

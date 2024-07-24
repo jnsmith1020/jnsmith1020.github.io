@@ -1,0 +1,27 @@
+---
+import "../styles/base.css"
+import "../styles/buttons.css"
+import "../styles/colors.css"
+
+import GTM from "../components/google/GTM.astro"
+import GTMNoScript from "../components/google/GTMNoScript.astro"
+import Head from "../components/page/Head.astro"
+import Shoelace from "../components/shoelace/Shoelace.astro"
+
+const { title, subtitle, description } = Astro.props
+---
+<html lang="en">
+	<head>
+        <GTM />
+		<Head title={title} subtitle={subtitle} description={description} />
+        <Shoelace />
+	</head>
+    <body>
+        <GTMNoScript />
+        <header></header>
+        <main>
+			<slot />
+		</main>
+        <footer></footer>
+    </body>
+</html>

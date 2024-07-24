@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+
+import "../styles/icon-list.css"
+import "../styles/page-outline.css"
+import "../styles/skills-card.css"
+import "../styles/timeline.css"
+
+import Outline from "../components/outline/Outline.astro"
+import IconList from "../components/icon_list/IconList.astro"
+import Timeline from "../components/timeline/Timeline.astro"
+
+import sections from "../data/outline.json"
+import languages from "../data/languages.json"
+import frameworks from "../data/frameworks.json"
+import experience from "../data/experience.json"
+import education from "../data/education.json"
+
+const title = "Josh Smith"
+const subtitle = "Web Developer"
+const description = "Learn about my career as a web developer."
+const now = new Date(Date.now()).toLocaleDateString()
+---
+<BaseLayout
+    title={title}
+    subtitle={subtitle}
+    description={description}>
+    <h1>
+        {title}
+        <span class="subtitle">{subtitle}</span>
+    </h1>
+    <details>
+        <summary>
+            On this page
+        </summary>
+        <Outline items={sections} />
+    </details>
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+            I'm Josh Smith, a passionate full-stack web developer that specializes in
+            creating user-friendly websites that are accessible to everyone.
+        </p>
+    </section>
+    <section id="core-skills">
+        <h2>Core Skills</h2>
+        <section class="skills-card__container">
+            <sl-card class="skills-card">
+                <div slot="header">
+                    <h3>Languages</h3>
+                </div>
+                <IconList items={languages} />
+            </sl-card>
+            <sl-card class="skills-card">
+                <div slot="header">
+                    <h3>Frameworks</h3>
+                </div>
+                <IconList items={frameworks} />
+            </sl-card>
+        </section>
+    </section>
+    <section id="professional-experience">
+        <h2>Professional Experience</h2>
+        <p
+            class="timeline__updated js-timeline__updated">
+            Updated: {now}
+        </p>
+        <Timeline items={experience} />
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <p
+            class="timeline__updated js-timeline__updated">
+            Updated: {now}
+        </p>
+        <Timeline items={education} />
+    </section>
+</BaseLayout>

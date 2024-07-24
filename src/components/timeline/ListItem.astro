@@ -1,0 +1,14 @@
+---
+import TimeSince from "./TimeSince.astro"
+
+const { title, subtitle, startDate, endDate } = Astro.props
+---
+<li class="timeline__item">
+    <div class="timeline__title">{title}</div>
+    <div class="timeline__subtitle">{subtitle}</div>
+    { 
+        startDate && (
+            <TimeSince startDate={startDate} endDate={endDate} />
+        )
+    }
+</li>

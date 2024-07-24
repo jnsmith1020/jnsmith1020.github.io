@@ -1,0 +1,10 @@
+[
+    {
+        "text": "Django/Wagtail",
+        "icon": "gear"
+    },
+    {
+        "text": "Symfony/Drupal",
+        "icon": "gear"
+    }
+]

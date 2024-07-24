@@ -1,0 +1,28 @@
+---
+import ListItem from "./ListItem.astro"
+
+interface TimelineItem {
+    title: string;
+    subtitle: string;
+    startDate: string;
+    endDate: string;
+}
+
+const { items } = Astro.props
+---
+<ul class="timeline">
+    {
+        items.map((item: TimelineItem) => 
+            <ListItem
+                title={item.title}
+                subtitle={item.subtitle}
+                startDate={item.startDate}
+                endDate={item.endDate} />
+        )
+    }
+</ul>
+
+<script>
+    import { updateDates } from "../../scripts/time.js"
+    updateDates()
+</script>

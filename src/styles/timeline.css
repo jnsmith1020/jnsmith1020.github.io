@@ -2,6 +2,10 @@
     padding-inline-start: var(--sl-spacing-x-small);
 }
 
+.timeline__updated {
+    font-size: var(--sl-font-size-small);
+}
+
 .timeline__item {
     position: relative;
     margin-bottom: var(--sl-spacing-medium);
