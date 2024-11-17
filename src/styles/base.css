@@ -3,18 +3,23 @@
     --jns-color-transparent-black-light: hsla(0, 0%, 0%, 0.2);
     --jns-color-transparent-black-dark: hsla(0, 0%, 0%, 0.25);
     font-family: var(--sl-font-serif);
+
+    @media (prefers-color-scheme: light) {
+        --jns-color-transparent-black-light: hsla(0, 0%, 0%, 0.1);
+        --jns-color-transparent-black-dark: hsla(0, 0%, 0%, 0.11);
+    }
 }
 
 body {
     position: relative;
-    padding: var(--sl-spacing-medium);
+    padding: var(--sl-spacing-large);
     margin: 0 auto;
     max-width: 80ch;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-color);
     font-family: var(--sl-font-sans);
-    text-shadow: 1px 1px hsla(0, 0%, 0%, 0.5);
 }
 
 details {
@@ -32,13 +37,14 @@ details > summary {
 }
 
 .subtitle {
+    color: var(--text-label);
     display: block;
     font-size: 0.7em;
 }
 
 a {
     text-decoration: none;
-    color: var(--sl-color-yellow-200);
+    color: var(--primary-color);
 }
 
 a:hover {
@@ -46,6 +52,12 @@ a:hover {
     text-underline-position: from-font;
     text-underline-offset: var(--sl-spacing-3x-small);
 }
+
+label {
+    color: var(--text-label);
+    font-size: var(--sl-font-size-small);
+}
+
 sl-card:not(:defined) {
     opacity: 0;
 }

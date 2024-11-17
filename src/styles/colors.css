@@ -1,5 +1,18 @@
 :root {
-  color: var(--sl-color-neutral-50);
-  background-color: var(--sl-color-emerald-800);
-  background: linear-gradient(90deg, var(--sl-color-emerald-800) 0%, var(--sl-color-emerald-700) 60%, var(--sl-color-emerald-600) 100%);
+  --primary-color: #8ebbff;
+  --background-color: #24293e;
+  --foreground-color: #2f3651;
+  --text: #e5f0ff;
+  --text-label: #c2daff;
+
+  @media (prefers-color-scheme: light) {
+    --primary-color: #2b5288;
+    --background-color: #e5e0d9;
+    --foreground-color: #cec9c3;
+    --text: #24293e;
+    --text-label: hsl(228, 27%, 35%);
+  }
+
+  color: var(--text);
+  background-color: var(--background-color);
 }

@@ -18,7 +18,7 @@
 
 .timeline__item::before {
     content: "";
-    background-color: var(--sl-color-emerald-700);
+    background-color: var(--foreground-color);
     width: 1px;
     height: calc(100% + 1rem);
     position: absolute;
@@ -29,10 +29,6 @@
 
 ul li.timeline__item:last-of-type::before {
     display: none;
-}
-
-.timeline__date {
-    font-size: var(--sl-font-size-small);
 }
 
 .timeline__title {

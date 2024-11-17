@@ -6,7 +6,7 @@
     list-style-type: none;
     margin-bottom: 0;
     margin-left: 5px;
-    border-left: 1px solid var(--sl-color-emerald-700);
+    border-left: 1px solid var(--text-label);
     padding-left: var(--sl-spacing-small);
 }
 

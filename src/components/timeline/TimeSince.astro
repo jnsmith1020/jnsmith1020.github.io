@@ -12,11 +12,11 @@ const timeElapsed = calculateTimeElapsed(
 ---
 { 
     timeElapsed && (
-        <div
-            class="timeline__date js-timeline__date"
+        <label
+            class="js-timeline__date"
             data-start={startDate}
             data-end={endDate}>
             {timeElapsed}
-        </div>
+        </label>
     )
 }
