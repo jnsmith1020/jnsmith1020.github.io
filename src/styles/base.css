@@ -2,7 +2,11 @@
     --jns-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.3);
     --jns-color-transparent-black-light: hsla(0, 0%, 0%, 0.2);
     --jns-color-transparent-black-dark: hsla(0, 0%, 0%, 0.25);
-    font-family: var(--sl-font-serif);
+    
+    font-family: "Montserrat", var(--sl-font-serif);
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 
     @media (prefers-color-scheme: light) {
         --jns-color-transparent-black-light: hsla(0, 0%, 0%, 0.1);
@@ -19,7 +23,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
-    font-family: var(--sl-font-sans);
+    font-family: "Montserrat", var(--sl-font-sans);
 }
 
 details {
