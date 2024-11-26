@@ -1,0 +1,27 @@
+---
+import type { ImageMetadata } from 'astro'
+import { Image, getImage } from 'astro:assets'
+
+const { label, path, pathDark, alt } = Astro.props
+
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/logos/*.{jpeg,jpg,png,gif,svg}')
+if (!images[path]) throw new Error(`"${path}" does not exist in glob: "/src/assets/logos/*.{jpeg,jpg,png,gif,svg}"`)
+
+const src = images[path]()
+let srcDark = null
+
+if (images[pathDark]) {
+    const metaDark = { src: images[pathDark]() }
+    const imageDark = await getImage(metaDark)
+
+    srcDark = imageDark.src
+    console.log(srcDark)
+}
+---
+<li class="logo-list__item">
+    <picture class="logo-list__logo">
+        {srcDark && <source srcset={srcDark} media="(prefers-color-scheme:dark)">}
+        <Image src={src} alt={alt} width="48" height="48"/>
+    </picture>
+    <label class="logo-list__label">{label}</label>
+</li>

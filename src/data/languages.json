@@ -1,26 +1,32 @@
 [
     {
-        "text": "CSS",
-        "icon": "filetype-css"
+        "label": "CSS",
+        "path": "/src/assets/logos/css.svg",
+        "pathDark": "/src/assets/logos/css-light.svg",
+        "alt": "CSS logo"
     },
     {
-        "text": "HTML",
-        "icon": "filetype-html"
+        "label": "HTML",
+        "path": "/src/assets/logos/html.svg",
+        "pathDark": "/src/assets/logos/html-light.svg",
+        "alt": "HTML logo"
     },
     {
-        "text": "JavaScript",
-        "icon": "filetype-js"
+        "label": "JavaScript",
+        "path": "/src/assets/logos/js.svg",
+        "pathDark": "",
+        "alt": "JavaScript logo"
     },
     {
-        "text": "MySQL",
-        "icon": "filetype-sql"
+        "label": "PHP",
+        "path": "/src/assets/logos/php.svg",
+        "pathDark": "",
+        "alt": "PHP logo"
     },
     {
-        "text": "PHP",
-        "icon": "filetype-php"
-    },
-    {
-        "text": "Python",
-        "icon": "filetype-py"
+        "label": "Python",
+        "path": "/src/assets/logos/python.svg",
+        "pathDark": "",
+        "alt": "Python logo"
     }
 ]

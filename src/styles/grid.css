@@ -1,0 +1,7 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: var(--sl-spacing-medium);
+    row-gap: var(--sl-spacing-medium);
+    justify-items: left;
+}

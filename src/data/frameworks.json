@@ -1,10 +1,20 @@
 [
     {
-        "text": "Django/Wagtail",
-        "icon": "gear"
+        "label": "Astro",
+        "path": "/src/assets/logos/astro-dark.svg",
+        "pathDark": "/src/assets/logos/astro.svg",
+        "alt": "Astro logo"
     },
     {
-        "text": "Symfony/Drupal",
-        "icon": "gear"
+        "label": "Drupal",
+        "path": "/src/assets/logos/drupal.svg",
+        "pathDark": "",
+        "alt": "Drupal logo"
+    },
+    {
+        "label": "Wagtail",
+        "path": "/src/assets/logos/wagtail.svg",
+        "pathDark": "/src/assets/logos/wagtail-light.svg",
+        "alt": "Wagtail logo"
     }
 ]

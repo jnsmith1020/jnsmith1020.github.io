@@ -2,12 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 
 import "../styles/icon-list.css"
+import "../styles/logo-list.css"
 import "../styles/page-outline.css"
-import "../styles/skills-card.css"
+import "../styles/grid.css"
 import "../styles/timeline.css"
 
 import Outline from "../components/outline/Outline.astro"
-import IconList from "../components/icon_list/IconList.astro"
+import LogoList from "../components/logo_list/LogoList.astro"
 import Timeline from "../components/timeline/Timeline.astro"
 
 import sections from "../data/outline.json"
@@ -44,19 +45,16 @@ const now = new Date(Date.now()).toLocaleDateString()
     </section>
     <section id="core-skills">
         <h2>Core Skills</h2>
-        <section class="skills-card__container">
-            <sl-card class="skills-card">
-                <div slot="header">
-                    <h3>Languages</h3>
-                </div>
-                <IconList items={languages} />
-            </sl-card>
-            <sl-card class="skills-card">
-                <div slot="header">
-                    <h3>Frameworks</h3>
-                </div>
-                <IconList items={frameworks} />
-            </sl-card>
+        <section id="languages">
+            <div slot="header">
+                <h3>Languages</h3>
+            </div>
+            <LogoList items={languages} />
+        <section id="frameworks">
+            <div slot="header">
+                <h3>Frameworks</h3>
+            </div>
+            <LogoList items={frameworks} />
         </section>
     </section>
     <section id="professional-experience">

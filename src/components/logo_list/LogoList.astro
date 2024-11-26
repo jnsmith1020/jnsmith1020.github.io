@@ -1,0 +1,17 @@
+---
+import LogoItem from "./LogoItem.astro"
+
+interface LogoListItem {
+    label: string;
+    path: string;
+    pathDark: string;
+    alt: string;
+}
+
+const { items } = Astro.props
+---
+<ul class="grid logo-list">
+    {
+        items.map((item: LogoListItem) => <LogoItem label={item.label} path={item.path} pathDark={item.pathDark} alt={item.alt} />)
+    }
+</ul>
