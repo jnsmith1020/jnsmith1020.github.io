@@ -26,30 +26,35 @@ const now = new Date(Date.now()).toLocaleDateString()
     title={title}
     subtitle={subtitle}
     description={description}>
-    <h1>
-        {title}
-        <span class="subtitle">{subtitle}</span>
-    </h1>
-    <details>
-        <summary>
-            On this page
-        </summary>
-        <Outline items={sections} />
-    </details>
-    <section id="introduction">
+    <div class="section">
+        <h1>
+            {title}
+            <span class="subtitle">{subtitle}</span>
+        </h1>
+    </div>
+    <div class="section">
+        <details>
+            <summary>
+                On this page
+            </summary>
+            <Outline items={sections} />
+        </details>
+    </div>
+    <section id="introduction" class="section">
         <h2>Introduction</h2>
         <p>
             I'm Josh Smith, a passionate full-stack web developer that specializes in
             creating user-friendly websites that are accessible to everyone.
         </p>
     </section>
-    <section id="core-skills">
+    <section id="core-skills" class="section">
         <h2>Core Skills</h2>
         <section id="languages">
             <div slot="header">
                 <h3>Languages</h3>
             </div>
             <LogoList items={languages} />
+        </section>
         <section id="frameworks">
             <div slot="header">
                 <h3>Frameworks</h3>
@@ -57,7 +62,7 @@ const now = new Date(Date.now()).toLocaleDateString()
             <LogoList items={frameworks} />
         </section>
     </section>
-    <section id="professional-experience">
+    <section id="professional-experience" class="section">
         <h2>Professional Experience</h2>
         <p
             class="timeline__updated js-timeline__updated">
@@ -65,7 +70,7 @@ const now = new Date(Date.now()).toLocaleDateString()
         </p>
         <Timeline items={experience} />
     </section>
-    <section id="education">
+    <section id="education" class="section">
         <h2>Education</h2>
         <p
             class="timeline__updated js-timeline__updated">

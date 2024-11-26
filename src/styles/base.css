@@ -40,6 +40,10 @@ details > summary {
     cursor: pointer;
 }
 
+.section {
+    margin-bottom: var(--sl-spacing-2x-large);
+}
+
 .subtitle {
     color: var(--text-label);
     display: block;
